@@ -1,6 +1,5 @@
 package projeto;
 
-import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Container;
 import java.awt.Font;
@@ -12,7 +11,6 @@ import java.text.DecimalFormat;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
@@ -30,9 +28,6 @@ public class Interface extends JFrame implements ActionListener{
 		
 		Color cor = new Color(200,200,200);
 		Font fonte = new Font("Arial",Font.PLAIN,14);
-		
-		JPanel vazio = new JPanel();
-		vazio.setBackground(cor);
 		
 		JTextArea jSalario = new JTextArea("Entre com o salario: ");
 		jSalario.setEditable(false);
@@ -56,14 +51,14 @@ public class Interface extends JFrame implements ActionListener{
 		resultado.setEditable(false);
 		
 		Container menu = new Container();
-		menu.setLayout(new GridLayout(2,4));
+		menu.setLayout(new GridLayout(2,4, 15, 15));
 		menu.add(jSalario);
 		menu.add(tSalario);
 		menu.add(jDependentes);
 		menu.add(tDependentes);
 		
 		Container total = new Container();
-		total.setLayout(new GridLayout(3,1));
+		total.setLayout(new GridLayout(3,1, 30, 30));
 		total.add(menu);
 		total.add(confirmar);
 		total.add(resultado);
